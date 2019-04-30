@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("mjuuso/getintodevops-hellonode")
+        app = docker.build("jayagopal-narayan/getintodevops-hellonode")
     }
 
     stage('Test image') {
@@ -19,7 +19,7 @@ node {
          * Run a curl inside the newly-build Docker image */
 
         app.inside {
-            sh 'curl http://localhost:8000 || exit 1'
+            sh 'curl http://127.0.0.1:8000 || exit 1'
         }
     }
 
