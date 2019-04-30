@@ -11,4 +11,10 @@ node {
             sh 'git clone https://github.com/jayagopal-narayan/getintodevops-hellonode'
             sh 'ls'
     }
+    
+    stage('Remove repo') {
+
+            sh 'rm -rf getintodevops-hellonode'
+            sh 'ls'
+    }
 }
