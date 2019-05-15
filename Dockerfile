@@ -17,6 +17,8 @@ EXPOSE 8000
 
 COPY . .
 
+RUN npm cache clean
+
 RUN npm install -g newman
 
 RUN newman run collection.json -e collection.env.json
