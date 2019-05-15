@@ -25,4 +25,4 @@ RUN cat collection.json
 
 RUN cat collection.env.json
 
-RUN newman run collection.json –e collection.env.json
+RUN newman run collection.json -e collection.env.json
