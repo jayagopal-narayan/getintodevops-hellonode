@@ -15,6 +15,8 @@ WORKDIR /usr/src/app
 # tell docker what port to expose
 EXPOSE 8000
 
+COPY . .
+
 RUN npm install -g newman
 
 RUN ls -all
