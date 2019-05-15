@@ -17,7 +17,8 @@ EXPOSE 8000
 
 COPY . .
 
-RUN npm --force cache clean
+# Run npm with full permission
+RUN npm config set unsafe-perm true
 
 RUN npm install -g newman
 
