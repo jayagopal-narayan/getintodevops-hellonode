@@ -14,4 +14,8 @@ EXPOSE 8000
 
 RUN npm install -g newman
 
-RUN newman run collection.json –e collection.env.json
+RUN ls
+
+RUN pwd
+
+# RUN newman run collection.json –e collection.env.json
