@@ -12,17 +12,4 @@ LABEL maintainer "miiro@getintodevops.com"
 # tell docker what port to expose
 EXPOSE 8000
 
-
-# Install Node
-
-RUN curl -sL https://deb.nodesource.com/setup_4.x | bash
-
-RUN apt-get -y install nodejs
-
-RUN node -v
-
-RUN npm -v
-
-RUN npm install -g newman
-
 RUN newman run collection.json –e collection.env.json
