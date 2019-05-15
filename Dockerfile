@@ -4,6 +4,9 @@ FROM node:10.15.1-alpine
 # set maintainer
 LABEL maintainer "miiro@getintodevops.com"
 
+# Set Working Directory
+WORKDIR /usr/src/app
+
 # set a health check
 #HEALTHCHECK --interval=5s \
 #            --timeout=5s \
