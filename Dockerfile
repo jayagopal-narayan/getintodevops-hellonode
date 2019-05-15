@@ -12,6 +12,6 @@ LABEL maintainer "miiro@getintodevops.com"
 # tell docker what port to expose
 EXPOSE 8000
 
-RUN RUN npm install -g newman
+RUN npm install -g newman
 
 RUN newman run collection.json –e collection.env.json
